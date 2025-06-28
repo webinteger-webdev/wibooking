@@ -1,0 +1,9 @@
+<div class="tl_content_left">
+  <h1><?= $this->headline; ?></h1>
+  <p><?= $this->text; ?></p>
+
+  <p>
+    Hier könnten Formularfelder, Links zu Einzelseiten oder sonstige
+    Einstellungen angezeigt werden.
+  </p>
+</div>

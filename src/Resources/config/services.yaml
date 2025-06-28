@@ -1,0 +1,6 @@
+services:
+  Webinteger\WiBooking\Controller\FrontendModule\:
+    resource: "%kernel.project_dir%/vendor/webinteger/wibooking/src/Controller/FrontendModule/*"
+    autowire: true
+    autoconfigure: true
+    public: true

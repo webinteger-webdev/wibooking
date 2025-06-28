@@ -1,0 +1,33 @@
+{
+  "name": "webinteger/wibooking",
+  "type": "contao-bundle",
+  "description": "Buchungsmodul für Ferienobjekte an der Ostsee (Contao 5, Twig)",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dietrich Bojko",
+      "email": "info@webinteger.dev",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "contao/core-bundle": "^5.3",
+    "contao/manager-plugin": "^2.0",
+    "doctrine/orm": "^2.15"
+  },
+  "autoload": {
+    "psr-4": {
+      "Webinteger\\WiBooking\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Webinteger\\WiBooking\\ContaoManager\\Plugin"
+  },
+  "support": {
+    "source": "https://github.com/webinteger-webdev/contao-booking",
+    "issues": "https://github.com/webinteger-webdev/contao-booking/issues"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

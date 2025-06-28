@@ -1,0 +1,17 @@
+#tl_navigation .group-wibooking {
+  background: url("/bundles/wibooking/images/icon.svg") 3px 2px no-repeat;
+}
+
+.tl_content_left h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tl_content_left p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tl_content_left {
+  padding: 20px;
+}

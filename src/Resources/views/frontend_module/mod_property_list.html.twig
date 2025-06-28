@@ -1,0 +1,11 @@
+{# mod_property_list.html.twig #}
+<div class="mod_property_list">
+  <h2>Objekte</h2>
+  {% for property in properties %}
+    <div class="property">
+      <h3>{{ property.title }}</h3>
+    </div>
+  {% else %}
+    <p>Keine Objekte gefunden.</p>
+  {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+{% extends '@Contao/backend/blank.html.twig' %}
+
+{% block main %}
+    <h1>{{ headline }}</h1>
+    <p>{{ text }}</p>
+
+    <p>Hier könnten Formularfelder, Links zu Einzelseiten oder sonstige Einstellungen angezeigt werden.</p>
+{% endblock %}
+{% block content %}
+    <div class="tl_content_left">
+        <a href="{{ locationsUrl }}" class="tl_submit">Locations verwalten</a><br>
+        <a href="{{ seasonsUrl }}" class="tl_submit">Saisons verwalten</a><br>
+        <a href="{{ propertiesUrl }}" class="tl_submit">Objekte verwalten</a><br>
+        <a href="{{ distancesUrl }}" class="tl_submit">Entfernungen verwalten</a>
+    </div>
+{% endblock %}
