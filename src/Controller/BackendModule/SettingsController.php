@@ -27,7 +27,7 @@ class SettingsController extends BackendModule
         $request = $requestStack->getCurrentRequest();
 
         // Agentur oder Eigentüner Mode
-        $mode = $GLOBALS['TL_CONFIG']['wi_booking_mode'];
+        // $mode = $GLOBALS['TL_CONFIG']['wi_booking_mode'];
 
         // Твой код
         $this->Template->headline = 'WI Booking Einstellungen';

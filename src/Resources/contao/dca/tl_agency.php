@@ -37,6 +37,12 @@ $GLOBALS['TL_DCA']['tl_agency'] = [
                 'href'  => 'act=edit',
                 'icon'  => 'edit.svg',
             ],
+            'owners' => [
+                'label' => &$GLOBALS['TL_LANG']['tl_agency']['owners'],
+                'href'  => 'act=showOwners',
+                'icon'  => 'edit.svg', // Beispiel-Icon
+                'button_callback' => ['Webinteger\WiBooking\Callbacks\AgencyCallbacks', 'ownersButton']
+            ],
             'delete' => [
                 'label' => &$GLOBALS['TL_LANG']['tl_agency']['delete'],
                 'href'  => 'act=delete',
