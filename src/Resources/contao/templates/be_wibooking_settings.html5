@@ -6,4 +6,10 @@
     Hier könnten Formularfelder, Links zu Einzelseiten oder sonstige
     Einstellungen angezeigt werden.
   </p>
+  <p>
+    <a href="<?= $this->groupUrl ?>" class="tl_submit">Objektgruppen verwalten</a>
+  </p>
+  <p>
+    <a href="<?= $this->wisettings ?>" class="tl_submit">Agenturdaten und Eigentümer verwalten</a>
+  </p>
 </div>

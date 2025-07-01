@@ -8,3 +8,6 @@ $GLOBALS['TL_LANG']['FMD']['property_list']['category'] = 'Buchungsmodul';
 $GLOBALS['TL_LANG']['FMD']['property_list']['description'] = 'Zeigt eine Liste aller buchbaren Objekte.';
 
 $GLOBALS['TL_LANG']['MOD']['wibooking_settings'] = ['Einstellungen', 'Verwalten der Buchungsmodul-Einstellungen'];
+
+$GLOBALS['TL_LANG']['MOD']['property'] = ['Objekte', 'Objekte für das Buchungssystem verwalten'];
+$GLOBALS['TL_LANG']['MOD']['property_groups'] = ['Objektgruppen', 'Verwaltung von Objektgruppen für das Buchungssystem'];

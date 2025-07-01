@@ -26,8 +26,14 @@ class SettingsController extends BackendModule
         $requestStack = $container->get('request_stack');
         $request = $requestStack->getCurrentRequest();
 
+        // Agentur oder Eigentüner Mode
+        // $mode = $GLOBALS['TL_CONFIG']['wi_booking_mode'];
+
         // Твой код
         $this->Template->headline = 'WI Booking Einstellungen';
         $this->Template->text = 'Hier kannst du deine Grundeinstellungen konfigurieren.';
+
+        $this->Template->groupUrl = 'contao?do=property_groups';
+        $this->Template->wisettings = 'contao?do=agency';
     }
 }

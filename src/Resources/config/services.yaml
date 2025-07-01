@@ -4,3 +4,6 @@ services:
     autowire: true
     autoconfigure: true
     public: true
+  Webinteger\WiBooking\Callbacks\CountryOptionsCallback:
+    arguments:
+      $countries: '@contao.intl.countries'
