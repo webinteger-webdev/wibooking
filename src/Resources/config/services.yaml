@@ -7,3 +7,13 @@ services:
   Webinteger\WiBooking\Callbacks\CountryOptionsCallback:
     arguments:
       $countries: '@contao.intl.countries'
+  Webinteger\Wibooking\tl_member_agency_filter:
+    public: true
+  Webinteger\WiBooking\Helper\AgencyHelper:
+    arguments:
+      - '@database_connection'
+    public: true
+  Webinteger\WiBooking\Classes\AgencyMember:
+    arguments:
+      $requestStack: '@request_stack'
+    public: true

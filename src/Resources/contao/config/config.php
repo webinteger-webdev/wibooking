@@ -4,9 +4,13 @@ use Contao\ArrayUtil;
 use Contao\DC_Table;
 use Contao\DataContainer;
 
-$GLOBALS['TL_CSS'][] = 'bundles/wibooking/backend.css|static';
+$GLOBALS['TL_CSS'][] = 'bundles/wibooking/assets/backend/css/backend.css|static';
 
-
+$GLOBALS['TL_WIA'] = [
+    'configuration' => ['config'],
+    'properties'    => ['property', 'property_groups'],
+    'agencies'      => ['agency'],
+];
 
 // Dein Backend-Modul-Array vorbereiten
 $wibookingModules = [
@@ -16,9 +20,15 @@ $wibookingModules = [
         ],
         'property_groups' => [
             'tables' => ['tl_property_group'],
+            'hideInNavigation'  => true,
         ],
         'agency' => [
-            'tables' => ['tl_agency'],
+            'tables' => ['tl_agency', 'tl_agency_member'],
+            'hideInNavigation' => true,
+        ],
+        'config' => [
+            'tables' => ['tl_wibooking_config'],
+            'hideInNavigation' => true,
         ],
         'wibooking_settings' => [
             'callback' => \Webinteger\WiBooking\Controller\BackendModule\SettingsController::class,

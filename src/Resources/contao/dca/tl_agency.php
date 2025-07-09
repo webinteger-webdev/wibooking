@@ -2,7 +2,6 @@
 
 use Contao\DC_Table;
 
-
 $GLOBALS['TL_DCA']['tl_agency'] = [
     'config' => [
         'dataContainer' => DC_Table::class,
@@ -37,12 +36,6 @@ $GLOBALS['TL_DCA']['tl_agency'] = [
                 'href'  => 'act=edit',
                 'icon'  => 'edit.svg',
             ],
-            'owners' => [
-                'label' => &$GLOBALS['TL_LANG']['tl_agency']['owners'],
-                'href'  => 'act=showOwners',
-                'icon'  => 'edit.svg', // Beispiel-Icon
-                'button_callback' => ['Webinteger\WiBooking\Callbacks\AgencyCallbacks', 'ownersButton']
-            ],
             'delete' => [
                 'label' => &$GLOBALS['TL_LANG']['tl_agency']['delete'],
                 'href'  => 'act=delete',
@@ -53,6 +46,12 @@ $GLOBALS['TL_DCA']['tl_agency'] = [
                 'label' => &$GLOBALS['TL_LANG']['tl_agency']['show'],
                 'href'  => 'act=show',
                 'icon'  => 'show.svg',
+            ],
+            'owners' => [
+                'label' => &$GLOBALS['TL_LANG']['tl_agency']['owners'],
+                'href'  => 'table=tl_agency_member',
+                'icon'  => 'group.svg',
+                'button_callback' => ['Webinteger\WiBooking\Classes\AgencyMember', 'editOwners'],
             ],
         ],
     ],

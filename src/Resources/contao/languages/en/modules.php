@@ -9,5 +9,7 @@ $GLOBALS['TL_LANG']['FMD']['property_list']['description'] = 'Displays a list of
 
 $GLOBALS['TL_LANG']['MOD']['wibooking_settings'] = ['Settings', 'Manage booking module settings'];
 
+$GLOBALS['TL_LANG']['MOD']['config'] = ['System Settings', 'Manage booking module settings'];
+
 $GLOBALS['TL_LANG']['MOD']['property'] = ['Properties', 'Manage properties for the booking system'];
 $GLOBALS['TL_LANG']['MOD']['property_groups'] = ['Property Groups', 'Manage property groups for the booking system'];

@@ -5,6 +5,7 @@ namespace Webinteger\WiBooking\Callbacks;
 use Contao\CoreBundle\Exception\AccessDeniedException;
 use Contao\Database;
 use Contao\DataContainer;
+use Contao\Input;
 
 class MemberCallbacks
 {
@@ -43,6 +44,16 @@ class MemberCallbacks
 
             $db->prepare("UPDATE tl_member SET fullname = ? WHERE id = ?")
                 ->execute($fullname, $dc->id);
+        }
+    }
+
+    public function filterByAgency(DataContainer $dc)
+    {
+        $agencyId = Input::get('agency');
+        if ($agencyId) {
+            // Filter für das Backend-Listing setzen
+            $GLOBALS['TL_DCA']['tl_member']['list']['sorting']['root'] = [];
+            $GLOBALS['TL_DCA']['tl_member']['list']['sorting']['filter'][] = ['wiAgency=?', $agencyId];
         }
     }
 }

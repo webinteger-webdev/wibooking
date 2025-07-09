@@ -1,8 +1,9 @@
 <div class="tl_content_left">
   <h1><?= $this->headline; ?></h1>
-  <p><?= $this->text; ?></p>
+  <p><?= $this->description; ?></p>
+  <p><?= $this->version ?></p>
 
-  <p>
+  <!-- <p>
     Hier könnten Formularfelder, Links zu Einzelseiten oder sonstige
     Einstellungen angezeigt werden.
   </p>
@@ -11,5 +12,21 @@
   </p>
   <p>
     <a href="<?= $this->wisettings ?>" class="tl_submit">Agenturdaten und Eigentümer verwalten</a>
-  </p>
+  </p> -->
+
+  <div class="tl_container">
+    <?php foreach ($this->groups as $group): ?>
+
+      <div class="re_group">
+        <h3 class="<?= $group['alias'] ?>"><?= $group['group'] ?></h3>
+        <div class="re_group_inner">
+          <?php foreach ($group['modules'] as $module): ?>
+            <a href="<?= $module['link'] ?>" <?= (strpos($module['link'], "http") === 0) ? ' target="_blank"' : '' ?>><?= $module['title'] ?></a>
+            <p><?= $module['desc'] ?></p>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+
 </div>

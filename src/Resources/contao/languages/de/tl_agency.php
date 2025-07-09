@@ -14,3 +14,5 @@ $GLOBALS['TL_LANG']['tl_agency']['agencyTaxNumber'] = ['Steuernummer', 'Steuer- 
 $GLOBALS['TL_LANG']['tl_agency']['agencyLogo'] = ['Logo', 'Logo der Agentur.'];
 
 $GLOBALS['TL_LANG']['tl_agency']['edit'] = ['Bearbeiten', 'Einstellungen bearbeiten'];
+
+$GLOBALS['TL_LANG']['tl_agency']['owners'] = ['Eigentümer', 'Zeige alle Eigentümer dieser Agentur'];

@@ -16,7 +16,7 @@
   padding: 20px;
 }
 
-#tl_navigation [class^=menu_level_] a.property_groups,
+/* #tl_navigation [class^=menu_level_] a.property_groups,
 #tl_navigation [class^=menu_level_] a.agency {
   display: none;
-}
+} */

@@ -10,3 +10,5 @@ $GLOBALS['TL_LANG']['tl_agency']['agencyAddress'] = ['Address', 'Address of the 
 $GLOBALS['TL_LANG']['tl_agency']['agencyBank'] = ['Bank Details', 'Bank details of the agency (IBAN, BIC, etc.).'];
 $GLOBALS['TL_LANG']['tl_agency']['agencyTaxNumber'] = ['Tax Number', 'Tax or VAT ID of the agency.'];
 $GLOBALS['TL_LANG']['tl_agency']['agencyLogo'] = ['Logo', 'Logo of the agency.'];
+
+$GLOBALS['TL_LANG']['tl_agency']['owners'] = ['Owners', 'Show all owners of this agency'];

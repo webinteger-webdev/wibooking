@@ -1,16 +1,5 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_member']['palettes']['default'] .= ';{wi_booking_legend},wiAgency';
-
-$GLOBALS['TL_DCA']['tl_member']['fields']['wiAgency'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_member']['wiAgency'],
-    'exclude' => true,
-    'inputType' => 'select',
-    'foreignKey' => 'tl_agency.agencyName',
-    'eval' => ['includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
-    'sql' => "int(10) unsigned NOT NULL default 0",
-];
-
 $GLOBALS['TL_DCA']['tl_member']['fields']['fullname'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_member']['fullname'],
     'exclude' => true,
@@ -22,6 +11,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['fullname'] = [
     'sql' => "varchar(255) NOT NULL default ''",
 ];
 
+
 // Optional: ondelete_callback, falls gewünscht, um Löschen zu verhindern, wenn Eigentümer noch Objekte haben
 $GLOBALS['TL_DCA']['tl_member']['config']['ondelete_callback'][] = [
     'Webinteger\WiBooking\Callbacks\MemberCallbacks',
@@ -31,4 +21,9 @@ $GLOBALS['TL_DCA']['tl_member']['config']['ondelete_callback'][] = [
 $GLOBALS['TL_DCA']['tl_member']['config']['onsubmit_callback'][] = [
     'Webinteger\WiBooking\Callbacks\MemberCallbacks',
     'generateFullname',
+];
+
+$GLOBALS['TL_DCA']['tl_member']['config']['onload_callback'][] = [
+    'Webinteger\WiBooking\Callbacks\MemberCallbacks',
+    'filterByAgency'
 ];
